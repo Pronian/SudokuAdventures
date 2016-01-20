@@ -1,0 +1,13 @@
+﻿<xapCache source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Bin\Release\SudokuAdv_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9.10.15 г. 22:36:33">
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\obj\Release\SudokuAdv.dll" archivePath="SudokuAdv.dll" lastWriteTime="9.10.15 г. 22:36:32" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Images\BigMistake.png" archivePath="Images\BigMistake.png" lastWriteTime="9.10.15 г. 20:42:38" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Images\crown.png" archivePath="Images\crown.png" lastWriteTime="9.10.15 г. 19:07:54" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Images\Mistake.png" archivePath="Images\Mistake.png" lastWriteTime="28.9.15 г. 22:11:34" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Images\NoMistake.png" archivePath="Images\NoMistake.png" lastWriteTime="28.9.15 г. 22:11:22" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\puzzles.dat" archivePath="puzzles.dat" lastWriteTime="9.10.15 г. 20:15:30" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Background.png" archivePath="Background.png" lastWriteTime="26.4.15 г. 20:34:54" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="26.4.15 г. 20:34:54" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="9.10.15 г. 21:26:16" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Bin\Release\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="9.10.15 г. 21:12:10" />
+  <file source="E:\Documents\Visual Studio 2013\Projects\SudokuAdv\SudokuAdv\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="9.10.15 г. 21:26:16" />
+</xapCache>

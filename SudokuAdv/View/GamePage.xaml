@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SudokuAdv.View.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:View="clr-namespace:SudokuAdv.View"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF559595">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,17,0,17" Background="#FF903353">
+            <View:MistakeView x:Name="MistakeView" Margin="0,5,0,5"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="7,0">
+                <TextBlock x:Name="txtPuzzNum" Text="Puzzle# 01/81" FontSize="40" FontFamily="Euphemia" Foreground="#FFF8C67E"/>
+                <TextBlock Text=" · " FontSize="40" FontFamily="Euphemia" Foreground="#FFF8C67E" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTime" Text="00:00"  FontSize="40" FontFamily="Euphemia" Foreground="#FFF8C67E"/>
+            </StackPanel>
+            <!--<TextBlock x:Name="PageTitle" Text="page name" Margin="-3,-8,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentGrid" Grid.Row="1" VerticalAlignment="Top" Margin="5,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <View:GameBoardView x:Name="MainBoard" Margin="0,0,0,10"/>
+            <View:InputView x:Name="InputControl" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"></View:InputView>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

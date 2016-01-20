@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="PuzzleDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="SudokuAdv.Properties.Settings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Puzzles" Member="Puzzles">
+    <Type Name="Puzzle">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(81) NOT NULL" CanBeNull="false" />
+      <Column Name="Difficulty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clues" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
