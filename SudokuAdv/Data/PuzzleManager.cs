@@ -8,7 +8,7 @@ using System.IO.IsolatedStorage;
 
 namespace SudokuAdv.Data
 {
-    class PuzzleManager
+    static class PuzzleManager
     {
         private const string FileName = "save.dat";
 

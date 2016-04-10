@@ -7,7 +7,7 @@ namespace SudokuAdv.Logic
 {
     public class GameBoardLogic : ViewBase
     {
-        const string FileName = "gameboard.dat";
+        //const string FileName = "gameboard.dat";
 
         public SquareViewLogic SelectedBox { get; set; }
         public SquareViewLogic[,] GameArray { get; set; }
@@ -29,23 +29,23 @@ namespace SudokuAdv.Logic
             if (SelectedBox != null)
             {
                 //board.SetCell(SelectedBox.Row, SelectedBox.Column, inputValue);
-                if (inputValue != 0 && SelectedBox.Value == 0)
+                if (inputValue != 0 && SelectedBox.Value == 0) // user clears square
                 {
                     EmptyBoxes--;
                 }
-                else if (inputValue == 0 && SelectedBox.Value != 0)
+                else if (inputValue == 0 && SelectedBox.Value != 0) //input into square
                 {
                     EmptyBoxes++;
                 }
-                SelectedBox.Value = inputValue;
-                if (EmptyBoxes == 0)
+                SelectedBox.Value = inputValue; //actual value change 
+                if (EmptyBoxes == 0) // candidate for solved puzzle
                 {
                     if (CheckSolution())
                     {
                         return 1;
                     }
                 }
-                else
+                else // check if input is correct
                 {
                     if (!ValidateInput()) status = 2;
                 }
@@ -55,28 +55,6 @@ namespace SudokuAdv.Logic
             }
 
             return status;
-        }
-
-        public static GameBoardLogic LoadNewPuzzle(DateTime _x)
-        {
-            GameBoardLogic result = new GameBoardLogic();
-
-            //Random random = new Random();
-            //string easyPuzzle = SavedBoards.EasyGames[random.Next(0, SavedBoards.EasyGames.Length - 1)];
-            //List<SquareViewLogic> squares = new List<SquareViewLogic>();
-            //foreach (char s in easyPuzzle.ToCharArray())
-            //{
-            //    SquareViewLogic square = new SquareViewLogic();
-            //    if (s != '.')
-            //    {
-            //        square.Value = int.Parse(s.ToString());
-            //        square.IsEditable = false;
-            //    }
-            //    squares.Add(square);
-            //}
-
-            //result.GameArray = LoadFromSquareList(squares);
-            return result;
         }
 
         /// <summary>
@@ -109,7 +87,7 @@ namespace SudokuAdv.Logic
             result.GameArray = LoadFromSquareList(squares);
 
             RuleBasedSolver solv = new RuleBasedSolver(puzzle);
-            solv.RunStep(1000);
+            solv.RunStep(10000);
             result.solution = solv.board.ToString();
 
             return result;

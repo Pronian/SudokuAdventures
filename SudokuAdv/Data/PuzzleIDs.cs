@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SudokuAdv.Data
 {
-    class PuzzleIDs
+    static class PuzzleIDs
     {
-        public static int[] CampaingPuzzles = { 319, 134, 256, 193, 405, 308, 2 , 462, 850, //Beginner
+
+        public static int[] CampaingPuzzles = { 319, 134, 256, 193, 405, 308, 2 , 462, 850,  //Beginner
                                                 706, 6, 477, 110, 280, 252, 709, 414, 1028,  //Easy
                                                 2128, 2490, 2507, 3503, 3509, 3537, 3620, 3728, 3763, //Medium
                                                 3773, 3799, 3811, 3812, 2461, 3496, 3514, 3768, 3782,
@@ -23,7 +24,7 @@ namespace SudokuAdv.Data
         //Clues 36-32
         public static int[] EasyPuzzles = { 574 , 973};
         //Clues 31-28
-        public static int[] MediumPuzzles = { 2458,3589,3816,1220,583,682,3605,3553,3538};
+        public static int[] MediumPuzzles = { 2458, 3589, 3816, 1220, 583, 682, 3605, 3553, 3538 };
         //Clues 27-diff 100
         public static int[] HardPuzzles = { 3742,3712};
         //Clues Diff 155-1500

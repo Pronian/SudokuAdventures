@@ -7,9 +7,10 @@ using System.Windows.Controls.Primitives;
 
 namespace SudokuAdv.Logic
 {
-    class PopupManager
+    static class PopupManager
     {
         private static Popup popup = new Popup();
+
         public static bool PopupIsOpen 
         {
             get

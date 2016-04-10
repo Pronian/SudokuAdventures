@@ -8,22 +8,10 @@ using Windows.Storage;
 
 namespace SudokuAdv.Data
 {
-    class PuzzleReader
+    static class PuzzleReader
     {
         private static string fileName = @"puzzles.dat";
         private static string[] fileContent;
-
-        //private async static Task LD()
-        //{
-        //    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri(@"ms-appx:///" + fileName));
-        //    using (Stream stream = (await file.OpenReadAsync()).AsStreamForRead())
-        //    using (StreamReader reader = new StreamReader(stream))
-        //    {
-        //        Windows.Storage.FileProperties.BasicProperties x = await file.GetBasicPropertiesAsync();
-        //        char[] delimiter = { '\n' };
-        //        fileContent = reader.ReadToEnd().Split(delimiter);
-        //    }
-        //}
 
         private static void LoadFile()
         {
@@ -33,7 +21,6 @@ namespace SudokuAdv.Data
             {
                 using (var streamReader = new StreamReader(stream))
                 {
-                    //TestFileContentTextBox.Text = streamReader.ReadToEnd();
                     char[] delimiter = { '\n' };
                     fileContent = streamReader.ReadToEnd().Split(delimiter);
                 }

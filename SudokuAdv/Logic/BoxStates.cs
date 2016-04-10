@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SudokuAdv.Logic
 {
-    public class BoxStates
+    public static class BoxStates
     {
         public const int Default = 1;
         public const int Invalid = 2;

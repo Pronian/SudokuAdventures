@@ -18,7 +18,7 @@ namespace SudokuAdv.Logic
         /// </summary>
         public int NakedCount = 0;
         /// <summary>
-        /// The number of times the guessing was used.
+        /// The number of times guessing was used.
         /// </summary>
         public int GuessCount = 0;
 

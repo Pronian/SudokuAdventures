@@ -110,7 +110,6 @@
     <Compile Include="Logic\PopupManager.cs" />
     <Compile Include="Logic\RuleBasedSolver.cs" />
     <Compile Include="Logic\SquareViewLogic.cs" />
-    <Compile Include="Logic\SudokuPuzzle.cs" />
     <Compile Include="Logic\ViewBase.cs" />
     <Compile Include="View\GameBoardView.xaml.cs">
       <DependentUpon>GameBoardView.xaml</DependentUpon>

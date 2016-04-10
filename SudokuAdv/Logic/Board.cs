@@ -392,16 +392,16 @@ namespace SudokuAdv.Logic
 
         public override string ToString()
         {
-            string result = "";
+            StringBuilder result = new StringBuilder();
             for (int i = 0; i < 9; i++ )
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    result += board[i, j][0].ToString(); 
+                    result.Append(board[i, j][0].ToString());
                 }
             }
 
-            return result;
+            return result.ToString();
 
         }
     }

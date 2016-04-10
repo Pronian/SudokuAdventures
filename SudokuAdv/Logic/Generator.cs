@@ -143,7 +143,6 @@ namespace SudokuAdv.Logic
                             solver.board.board[row, col][0] = 0;
                             solver.board.AnalyzePossibilities();
                             col -= 2;
-                            //guess++;
                         }
                     }
 
@@ -180,7 +179,6 @@ namespace SudokuAdv.Logic
                 }
                 else
                 {
-                    //Console.WriteLine("Consumer: List empty!");
                     Monitor.Exit(candidateList);
                     Thread.Sleep(50);
                 }
@@ -229,10 +227,8 @@ namespace SudokuAdv.Logic
             consumer.Name = "Generator: Solver Thread";
             Thread producer = new Thread(new ThreadStart(Produce));
             producer.Name = "Generator: Producer Thread";
-            //Thread producer2 = new Thread(new ThreadStart(Produce));
             consumer.Start();
             producer.Start();
-            //producer2.Start();
 
             while (consumer.IsAlive)
             {
@@ -241,22 +237,16 @@ namespace SudokuAdv.Logic
                     TryGeneratePuzzle(ClueNumer);
                     candidate = ToString();
                 }
-                //mutex.WaitOne();
                 Monitor.Enter(candidateList);
                 if (candidateList.Count < 20)
                 {
                     candidateList.Add(candidate);
-                    //mutex.ReleaseMutex();
                     Monitor.Exit(candidateList);
                     candidate = "";
-                    //Monitor.PulseAll(candidateList);
                 }
                 else
                 {
-
-                    // mutex.ReleaseMutex();
                     Monitor.Exit(candidateList);
-                    //Monitor.Wait(candidateList);
                     Thread.Sleep(50);
                 }
             }
